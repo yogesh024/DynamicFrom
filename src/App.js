@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import SurveyForm from './component/SurveyFrom';
+import { Outlet } from 'react-router-dom'
+import { NavBar } from './component/NavBar'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const Home = () => (
+  <div>
+    <h1>Home</h1>
+
+    <>
+    <NavBar/>
+    <Outlet/>
+    </>
+    {/* <nav>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/survey">Survey Form</Link></li>
+      </ul>
+    </nav> */}
+  </div>
+);
+
+const App = () => (
+  <Router>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/survey" element={<SurveyForm />} />
+      </Routes>
     </div>
-  );
-}
+  </Router>
+);
 
 export default App;

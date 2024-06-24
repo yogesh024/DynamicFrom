@@ -1,0 +1,21 @@
+{
+  "Technology": {
+    "questions": [
+      { "label": "IDE of Choice", "type": "text" },
+      { "label": "Preferred Operating System", "type": "text" }
+    ]
+  },
+  "Health": {
+    "questions": [
+      { "label": "Exercise Time", "type": "text" },
+      { "label": "Average Sleep Hours", "type": "number" },
+      { "label": "Water Intake (liters/day)", "type": "number" }
+    ]
+  },
+  "Education": {
+    "questions": [
+      { "label": "Graduation Year", "type": "number" },
+      { "label": "Favorite Academic Subject", "type": "text" }
+    ]
+  }
+}
